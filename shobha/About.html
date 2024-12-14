@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* General body styling */
+        body {
+            background-image: url('Color.jpg'); /* Ensure the image is in the same directory */
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center; 
+           
+        }
+
+        /* Style for the "About Me" paragraph */
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #444;
+        }
+
+        /* Table styling for Bio Data */
+        table {
+            width: 50%;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.7); /* Slight white background for readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            color: black; /* Set text color to black for Bio Data */
+        }
+
+        td:first-child {
+            font-weight: bold;
+        }
+
+        /* Styling for three-column table */
+        .three-column-table {
+            width: 50%; /* Adjusted to reduce table width */
+            border-collapse: separate;
+            border-spacing: 10px 0; /* Reduced spacing between cells */
+            margin: 0 auto; /* Center the table */
+        }
+
+        .three-column-table td {
+            padding: 15px; /* Reduced padding */
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: top;
+            width: 200px; /* Reduced width of columns */
+            color: black; /* Set text color to black for programming languages section */
+        }
+
+        .data-row td {
+            height: 150px; /* Reduced row height */
+        }
+
+        .data-column td {
+            background-color: Beige;
+        }
+
+        .data-column1 {
+            background-color: Beige;
+            position: relative;
+        }
+
+        .image-container {
+            display: inline-block;
+            margin-right: 5px; /* Reduced margin between images */
+        }
+
+        .image1-container {
+            display: inline-block;
+            margin-right: 5px; /* Reduced margin between images */
+        }
+
+        /* Section padding */
+        section {
+            padding: 20px;
+        }
+
+        /* Styling for page title */
+        
+      
+        .three-column-table .data-row td {
+            color: black; /* Make text black for this section */
+        }
+
+        /* Styling for the Contact Info section */
+        .contact-info {
+            margin: 30px auto;
+            width: 50%; /* Adjusted width to ensure it's centered */
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            width: 100%; /* Ensure the contact info text fills the width */
+            color: #444;
+            margin: 5px 0;
+        }
+
+        /* Center the entire contact info section */
+        .contact-info-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- About me section -->
+    <section id="About me">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am Shobha, a Computer Science and Engineering student. I have already completed my diploma course and am continuing my studies in the field of Engineering.
+        </p>
+    </section>
+
+    <!-- Bio Data Table -->
+    <section>
+        <table>
+            <tr>
+                <td>NAME:</td>
+                <td>Shobha M</td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td>25/10/2004</td>
+            </tr>
+            <tr>
+                <td>Birth Place:</td>
+                <td>Davanagere</td>
+            </tr>
+            <tr>
+                <td>Study:</td>
+                <td>Engineering (Computer Science)</td>
+            </tr>
+            <tr>
+                <td>Native Place:</td>
+                <td>Davanagere, Karnataka</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Student Portfolio Section -->
+    <section id="skills">
+        <center><h1>I have learned some programming languages</h1></center>
+
+        <table class="three-column-table">
+            <tr class="data-column">
+                <td><b>PYTHON</b></td>
+                <td><b>JAVA</b></td>
+            </tr>
+            <tr class="data-row">
+                <td>I have learned Python in Data Visualization, Data Structures, and basic Python.</td>
+                <td>I have learned OOP concepts with JAVA (Object-Oriented Programming).</td>
+            </tr>
+            <tr class="data-column1">
+                <td>
+                    <div class="image-container">
+                        <img src="img3.jpg" width="50" height="45" alt="Google Colab"> <!-- Reduced image size -->
+                    </div>
+                    <div class="image-container">
+                        <img src="img2.jpg" width="50" height="45" alt="Pycharm"> <!-- Reduced image size -->
+                    </div>
+                    <div class="image-container">
+                        <img src="img1.jpg" width="50" height="45" alt="Jupyter"> <!-- Reduced image size -->
+                    </div>
+                </td>
+                <td>
+                    <div class="image1-container">
+                        <img src="img4.jpg" width="50" height="45" alt="ID"> <!-- Reduced image size -->
+                    </div>
+                    <div class="image1-container">
+                        <img src="img5.jpg" width="50" height="45" alt="Notepad"> <!-- Reduced image size -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Contact Information Section (Centered) -->
+     <section id="contact"></section>
+    <section class="contact-info-wrapper">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: shobha@2004.com</p>
+            <p>Phone: +7204908043</p>
+            <p>Address: Davanagere, Karnataka, India</p>
+        </div>
+        
+    </section>
+
+</body>
+</html>

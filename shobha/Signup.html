@@ -1,0 +1,131 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                width: 80%;
+            }
+        }
+
+    </style>
+</head>
+
+<!-- Signup Form -->
+<form id="signup-form" action="signup.php" method="POST" onsubmit="return validateSignup()">
+
+<section id="signup-form" class="form-container">
+    <h2>Sign Up</h2>
+   
+        <input type="text" name="username" id="signup-username" placeholder="Username" required>
+        <input type="email" name="email" id="signup-email" placeholder="Email" required>
+        <input type="password" name="password" id="signup-password" placeholder="Password" required>
+        <input type="password" name="confirm-password" id="signup-confirm-password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+        <p id="error-message" class="error"></p>
+    </form>
+</section>
+
+<script>
+    function validateSignup() {
+        // Clear any previous error messages
+        document.getElementById('error-message').innerText = '';
+
+        // Get form values
+        var username = document.getElementById('signup-username').value;
+        var email = document.getElementById('signup-email').value;
+        var password = document.getElementById('signup-password').value;
+        var confirmPassword = document.getElementById('signup-confirm-password').value;
+
+        // Validate Username (non-empty check)
+        if (username.trim() === "") {
+            document.getElementById('error-message').innerText = "Username is required.";
+            return false;
+        }
+
+        // Validate Email (check if it’s a valid email format)
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('error-message').innerText = "Please enter a valid email address.";
+            return false;
+        }
+
+        // Validate Password (check if both passwords match)
+        if (password !== confirmPassword) {
+            document.getElementById('error-message').innerText = "Passwords do not match.";
+            return false;
+        }
+
+        // Validate Password Strength (check if password is at least 6 characters long)
+        if (password.length < 6) {
+            document.getElementById('error-message').innerText = "Password must be at least 6 characters long.";
+            return false;
+        }
+
+        // If all validations pass, submit the form
+        return true;
+    }
+</script>
+
+</html>
